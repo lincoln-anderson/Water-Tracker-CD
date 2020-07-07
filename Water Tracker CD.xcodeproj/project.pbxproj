@@ -16,6 +16,7 @@
 		015D500624B4C3F00014DDE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015D500424B4C3F00014DDE1 /* LaunchScreen.storyboard */; };
 		015D501124B4C3F10014DDE1 /* Water_Tracker_CDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D501024B4C3F10014DDE1 /* Water_Tracker_CDTests.swift */; };
 		015D501C24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D501B24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift */; };
+		015D502A24B4C4F70014DDE1 /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D502924B4C4F70014DDE1 /* DayData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		015D501724B4C3F10014DDE1 /* Water Tracker CDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water Tracker CDUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015D501B24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_Tracker_CDUITests.swift; sourceTree = "<group>"; };
 		015D501D24B4C3F10014DDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		015D502924B4C4F70014DDE1 /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */,
 				015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */,
 				015D4FFD24B4C3F00014DDE1 /* ContentView.swift */,
+				015D502924B4C4F70014DDE1 /* DayData.swift */,
 				015D4FFF24B4C3F00014DDE1 /* Assets.xcassets */,
 				015D500424B4C3F00014DDE1 /* LaunchScreen.storyboard */,
 				015D500724B4C3F00014DDE1 /* Info.plist */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				015D4FF724B4C3F00014DDE1 /* AppDelegate.swift in Sources */,
+				015D502A24B4C4F70014DDE1 /* DayData.swift in Sources */,
 				015D4FF924B4C3F00014DDE1 /* SceneDelegate.swift in Sources */,
 				015D4FFE24B4C3F00014DDE1 /* ContentView.swift in Sources */,
 				015D4FFC24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld in Sources */,
