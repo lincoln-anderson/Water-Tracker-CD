@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015C618324B52692004D50F9 /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015C618224B52692004D50F9 /* DayCellView.swift */; };
 		015D4FF724B4C3F00014DDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */; };
 		015D4FF924B4C3F00014DDE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */; };
 		015D4FFC24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FFA24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015C618224B52692004D50F9 /* DayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		015D4FF324B4C3F00014DDE1 /* Water Tracker CD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Tracker CD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */,
 				015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */,
 				015D4FFD24B4C3F00014DDE1 /* HomeView.swift */,
+				015C618224B52692004D50F9 /* DayCellView.swift */,
 				015D502924B4C4F70014DDE1 /* DayData.swift */,
 				015D4FFF24B4C3F00014DDE1 /* Assets.xcassets */,
 				015D500424B4C3F00014DDE1 /* LaunchScreen.storyboard */,
@@ -277,6 +280,7 @@
 				015D4FF924B4C3F00014DDE1 /* SceneDelegate.swift in Sources */,
 				015D4FFE24B4C3F00014DDE1 /* HomeView.swift in Sources */,
 				015D4FFC24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld in Sources */,
+				015C618324B52692004D50F9 /* DayCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

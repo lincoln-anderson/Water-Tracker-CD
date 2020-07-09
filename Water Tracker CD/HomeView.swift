@@ -16,34 +16,89 @@ struct HomeView: View {
     @State private var newGoal = ""
     
     
+    
     var body: some View {
+        
         NavigationView {
             
-            List {
-                
-                ForEach(self.DaysData) { (day: DayData) in
+            
+            List{
+                Section{
                     
-                    Text(String(day.goal))
+                    TextField("goal", text: $newGoal)
+                    
                     
                 }
                 
+                Section{
+                    ForEach(self.DaysData) { (day: DayData) in
+                        
+                        Text(String(day.goal))
+                        
+                    }
+                
+                }
                 
             }
-            .navigationBarTitle(Text("Days Logged"))
             .toolbar {
-                Spacer()
-                #if os(iOS)
-                EditButton()
-                #endif
-                Spacer()
                 
-                Button("Add", action: makeNewDay)
-                Spacer()
+                Button("Add", action: {
+                    
+                    let day = DayData(context: moc)
+                    day.goal = Int64(Int(self.newGoal)!)
+                    day.progress = 0
+                    day.createdAt = Date()
+                    
+                    do {
+                        
+                        try self.moc.save()
+                        
+                    }catch{
+                        
+                        print(error)
+                        
+                    }
+                    
+                    self.newGoal = ""
+                    
+                    
+                    
+                })
+                
+                
             }
-            
         }
-        
+            
+            
     }
+        
+//        NavigationView {
+//
+//            List {
+//
+//                ForEach(self.DaysData) { (day: DayData) in
+//
+//                    DayCellView(goal: day.goal, progress: day.progress, date: day.createdAt)
+//
+//                }
+//
+//
+//            }
+//            .navigationBarTitle(Text("Days Logged"))
+//            .toolbar {
+//                Spacer()
+//                #if os(iOS)
+//                EditButton()
+//                #endif
+//                Spacer()
+//
+//                Button("Add", action: makeNewDay)
+//                Spacer()
+//            }
+//
+//        }
+//
+//    }
     
     func makeNewDay() {
         
