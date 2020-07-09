@@ -31,7 +31,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
-            let contentView = TodayView().environment(\.managedObjectContext, managedObjectContext)
+            let formatter = DateFormatter()
+            
+            formatter.locale = Locale(identifier: "en_US")
+            
+            formatter.dateFormat = "EEEE, MMMM, d"
+            
+            let contentView = TodayView(formatter: formatter).environment(\.managedObjectContext, managedObjectContext)
             
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window

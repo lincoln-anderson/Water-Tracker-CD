@@ -57,7 +57,7 @@ struct DataView: View {
             
             let day = DayData(context: self.moc)
             day.createdAt = Date()
-            day.goal = 120
+            day.goal = 150
             day.progress = 54
             
             do {
