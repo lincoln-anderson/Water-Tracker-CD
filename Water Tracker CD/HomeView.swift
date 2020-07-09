@@ -24,13 +24,6 @@ struct HomeView: View {
             
             List{
                 Section{
-                    
-                    TextField("goal", text: $newGoal)
-                    
-                    
-                }
-                
-                Section{
                     ForEach(self.DaysData) { (day: DayData) in
                         
                         Text(String(day.goal))
