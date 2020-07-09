@@ -21,77 +21,21 @@ struct HomeView: View {
         
         NavigationView {
             
-            
-            List{
-                Section{
-                    ForEach(self.DaysData) { (day: DayData) in
-                        
-                        DayCellView(goal: day.goal, progress: day.progress, date: day.createdAt)
-                        
-                    }
+            List {
                 
+                ForEach(self.DaysData) { day in
+                    
+                    DayCellView(goal: Int("\(day.goal)")!, progress: Int("\(day.progress)")!, date: "\(day.createdAt ?? Date())")
+                    
                 }
                 
-            }
-            .toolbar {
-                
-                Button("Add", action: {
-                    
-                    let day = DayData(context: moc)
-                    day.goal = Int64(Int(self.newGoal)!)
-                    day.progress = 0
-                    day.createdAt = Date()
-                    
-                    do {
-                        
-                        try self.moc.save()
-                        
-                    }catch{
-                        
-                        print(error)
-                        
-                    }
-                    
-                    self.newGoal = ""
-                    
-                    
-                    
-                })
-                
                 
             }
+            
+            
         }
-            
-            
-    }
         
-//        NavigationView {
-//
-//            List {
-//
-//                ForEach(self.DaysData) { (day: DayData) in
-//
-//                    DayCellView(goal: day.goal, progress: day.progress, date: day.createdAt)
-//
-//                }
-//
-//
-//            }
-//            .navigationBarTitle(Text("Days Logged"))
-//            .toolbar {
-//                Spacer()
-//                #if os(iOS)
-//                EditButton()
-//                #endif
-//                Spacer()
-//
-//                Button("Add", action: makeNewDay)
-//                Spacer()
-//            }
-//
-//        }
-//
-//    }
+    }
     
     func makeNewDay() {
         

@@ -17,7 +17,7 @@ struct DayCellView: View {
     
     var goal: Int
     var progress: Int
-    var date: Date
+    var date: String
     
     var body: some View {
         HStack {
@@ -36,7 +36,7 @@ struct DayCellView: View {
                     
                     
                     
-                    Text("\(date, formatter: Self.myFormatter)")
+                    Text(date)
                         .foregroundColor(.secondary)
                         .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     
@@ -49,6 +49,6 @@ struct DayCellView: View {
 
 struct DayCellView_Previews: PreviewProvider {
     static var previews: some View {
-        DayCellView(goal: 120, progress: 54, date: Date())
+        DayCellView(goal: 120, progress: 54, date: "")
     }
 }

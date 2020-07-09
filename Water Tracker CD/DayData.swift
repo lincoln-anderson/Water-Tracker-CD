@@ -22,7 +22,7 @@ extension DayData {
     
     static func getAllDays() -> NSFetchRequest<DayData> {
         
-        let request:NSFetchRequest<DayData> = NSFetchRequest<DayData>(entityName: "DayData") as! NSFetchRequest<DayData>
+        let request:NSFetchRequest<DayData> = NSFetchRequest<DayData>(entityName: "DayData") 
         
         let sorter = NSSortDescriptor(key: "createdAt", ascending: true)
         
