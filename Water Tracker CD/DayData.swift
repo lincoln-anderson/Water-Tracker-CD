@@ -16,6 +16,8 @@ public class DayData: NSManagedObject, Identifiable {
     
     @NSManaged public var progress: Int64
     
+    @NSManaged public var printDate: String
+    
 }
 
 extension DayData {

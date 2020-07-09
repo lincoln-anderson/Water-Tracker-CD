@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0153EE7B24B7B4B0000D56D2 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0153EE7A24B7B4B0000D56D2 /* TodayView.swift */; };
 		015C618324B52692004D50F9 /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015C618224B52692004D50F9 /* DayCellView.swift */; };
 		015D4FF724B4C3F00014DDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */; };
 		015D4FF924B4C3F00014DDE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */; };
 		015D4FFC24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FFA24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld */; };
-		015D4FFE24B4C3F00014DDE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FFD24B4C3F00014DDE1 /* HomeView.swift */; };
+		015D4FFE24B4C3F00014DDE1 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FFD24B4C3F00014DDE1 /* DataView.swift */; };
 		015D500024B4C3F00014DDE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015D4FFF24B4C3F00014DDE1 /* Assets.xcassets */; };
 		015D500324B4C3F00014DDE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015D500224B4C3F00014DDE1 /* Preview Assets.xcassets */; };
 		015D500624B4C3F00014DDE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015D500424B4C3F00014DDE1 /* LaunchScreen.storyboard */; };
@@ -38,12 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0153EE7A24B7B4B0000D56D2 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		015C618224B52692004D50F9 /* DayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		015D4FF324B4C3F00014DDE1 /* Water Tracker CD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Tracker CD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		015D4FFB24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Water_Tracker_CD.xcdatamodel; sourceTree = "<group>"; };
-		015D4FFD24B4C3F00014DDE1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		015D4FFD24B4C3F00014DDE1 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		015D4FFF24B4C3F00014DDE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		015D500224B4C3F00014DDE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		015D500524B4C3F00014DDE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,7 +109,8 @@
 			children = (
 				015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */,
 				015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */,
-				015D4FFD24B4C3F00014DDE1 /* HomeView.swift */,
+				015D4FFD24B4C3F00014DDE1 /* DataView.swift */,
+				0153EE7A24B7B4B0000D56D2 /* TodayView.swift */,
 				015C618224B52692004D50F9 /* DayCellView.swift */,
 				015D502924B4C4F70014DDE1 /* DayData.swift */,
 				015D4FFF24B4C3F00014DDE1 /* Assets.xcassets */,
@@ -278,7 +281,8 @@
 				015D4FF724B4C3F00014DDE1 /* AppDelegate.swift in Sources */,
 				015D502A24B4C4F70014DDE1 /* DayData.swift in Sources */,
 				015D4FF924B4C3F00014DDE1 /* SceneDelegate.swift in Sources */,
-				015D4FFE24B4C3F00014DDE1 /* HomeView.swift in Sources */,
+				0153EE7B24B7B4B0000D56D2 /* TodayView.swift in Sources */,
+				015D4FFE24B4C3F00014DDE1 /* DataView.swift in Sources */,
 				015D4FFC24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld in Sources */,
 				015C618324B52692004D50F9 /* DayCellView.swift in Sources */,
 			);
