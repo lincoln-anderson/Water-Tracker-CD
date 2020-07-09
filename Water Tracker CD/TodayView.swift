@@ -20,20 +20,37 @@ struct TodayView: View {
     
     var body: some View {
         
-        
-        List {
-            Text("Today is \(formatter.string(from:(DaysData.last?.createdAt)!))")
-                .fontWeight(.bold)
-                .font(.title)
-                .padding(.top, 100)
-            Spacer()
+        NavigationView {
+            List {
+                Text("Today is \(formatter.string(from:(DaysData.last?.createdAt)!))")
+                    .fontWeight(.bold)
+                    .font(.title)
+                
+                Text("Your Goal is \(DaysData.last!.goal)")
+                Text("You have drank \(DaysData.last!.progress) so far today")
+                Text("You have \(DaysData.last!.goal - DaysData.last!.progress) ounces left for the day")
             
-            Text("Your Goal is \(DaysData.last!.goal)")
-            Text("You have drank \(DaysData.last!.progress) so far today")
-            Text("You have \(DaysData.last!.goal - DaysData.last!.progress) ounces left for the day")
-            Spacer()
-        
+            }
+            .toolbar {
+                
+                Button("past days", action: {
+                    
+                    self.showingDataView.toggle()
+                    
+                }).sheet(isPresented: $showingDataView, onDismiss: {
+                    
+                    showingDataView = false
+                    
+                }) {
+                    
+                    DataView(DaysData: DaysData).environment(\.managedObjectContext, moc)
+                    
+                }
+                
+            }
+            
         }
+        
         
     }
 }

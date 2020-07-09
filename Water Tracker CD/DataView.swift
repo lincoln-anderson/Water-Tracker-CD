@@ -11,7 +11,7 @@ struct DataView: View {
     
     @Environment(\.managedObjectContext) var moc
     
-    @FetchRequest(fetchRequest: DayData.getAllDays()) var DaysData: FetchedResults<DayData>
+    @State var DaysData: FetchedResults<DayData>
     
     @State private var newGoal = ""
     
@@ -34,17 +34,12 @@ struct DataView: View {
                 }
                 
             }
-            .navigationTitle("Days Logged")
             .toolbar {
-                Spacer()
-                #if os(iOS)
-                EditButton()
-                #endif
-                Spacer()
                 
                 Button("Add", action: makeNewDay)
-                Spacer()
             }
+            .navigationTitle("Days Logged")
+            
             
             
         }
@@ -90,8 +85,10 @@ struct DataView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        DataView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        
+//        
+//        DataView(DaysData:)
+//    }
+//}
