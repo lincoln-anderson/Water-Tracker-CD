@@ -26,7 +26,7 @@ struct HomeView: View {
                 Section{
                     ForEach(self.DaysData) { (day: DayData) in
                         
-                        Text(String(day.goal))
+                        DayCellView(goal: day.goal, progress: day.progress, date: day.createdAt)
                         
                     }
                 
