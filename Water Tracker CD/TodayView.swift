@@ -21,13 +21,33 @@ struct TodayView: View {
     var body: some View {
         
         VStack {
+//            Button("add", action: {
+//                
+//                let day = DayData(context: self.moc)
+//                day.createdAt = Date()
+//                day.goal = 150
+//                day.progress = 54
+//                
+//                do {
+//                    try self.moc.save()
+//                }catch{
+//                    
+//                    print(error)
+//                    
+//                }
+//                
+//                
+//            })
+            
             NavigationView {
                 List {
                     Text("Today is \(formatter.string(from:(DaysData.last?.createdAt)!))")
                         .fontWeight(.bold)
                         .font(.title)
+                        .foregroundColor(Color(hex: "404040"))
                     
                     Text("Youre goal today is \(DaysData.last!.goal) ounces")
+                        .foregroundColor(Color(hex: "40cac6"))
                     
                 }
                 .toolbar {
@@ -36,7 +56,9 @@ struct TodayView: View {
                         
                         self.showingDataView.toggle()
                         
-                    }).sheet(isPresented: $showingDataView, onDismiss: {
+                    })
+                    .foregroundColor(Color(hex: "40cac6"))
+                    .sheet(isPresented: $showingDataView, onDismiss: {
                         
                         showingDataView = false
                         
@@ -53,8 +75,11 @@ struct TodayView: View {
 //            Text("Your Goal is \(DaysData.last!.goal)")
 //            Text("You have drank \(DaysData.last!.progress) so far today")
 //            Text("You have \(DaysData.last!.goal - DaysData.last!.progress) ounces left for the day")
-            CupView()
+            CupView(goal: CGFloat(DaysData.last!.goal), progress: CGFloat(DaysData.last!.progress)).environment(\.managedObjectContext, moc)
             Spacer()
+            Text("\(DaysData.last!.progress)/\(DaysData.last!.goal) Ounces drank")
+                .bold()
+                .foregroundColor(Color(hex: "404040"))
         }
         
         

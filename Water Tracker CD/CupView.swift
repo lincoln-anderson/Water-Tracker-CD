@@ -8,15 +8,50 @@
 import SwiftUI
 
 struct CupView: View {
+    
+    @Environment(\.managedObjectContext) var moc
+    
+    @State var goal: CGFloat
+    
+    @State var progress: CGFloat
+    
     var body: some View {
-        cup()
-            .fill(Color("40E0D0"))
-            .overlay(
-                cup()
-                .stroke(lineWidth: 15)
-                
-            )
-            .frame(width: 300, height: 600, alignment: .center)
+        VStack {
+            Text("\(Int(progress/goal*100))% done!")
+                .bold()
+                .font(.title)
+            cup()
+                .trim(from: 0, to: getProgress())
+                .fill(Color(hex: "40cac6"))
+                .overlay(
+                    cup()
+                    .stroke(lineWidth: 15)
+                        .foregroundColor(Color(hex: "404040"))
+                    
+                )
+                .frame(width: 300, height: 550, alignment: .center)
+        }
+    }
+    
+    func getProgress() -> CGFloat {
+        
+        var passedProgress = progress
+        
+        let passedGoal = goal
+        
+        switch passedProgress {
+        case 0 :
+            passedProgress = 0
+        default:
+            passedProgress = passedProgress/passedGoal
+            
+            passedProgress = passedProgress * 0.55
+            
+            passedProgress = passedProgress + 0.40
+            
+        }
+        
+        return passedProgress
     }
 }
 
@@ -48,8 +83,8 @@ struct cup: Shape {
     
 }
 
-struct CupView_Previews: PreviewProvider {
-    static var previews: some View {
-        CupView()
-    }
-}
+//struct CupView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CupView()
+//    }
+//}
