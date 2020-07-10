@@ -20,35 +20,41 @@ struct TodayView: View {
     
     var body: some View {
         
-        NavigationView {
-            List {
-                Text("Today is \(formatter.string(from:(DaysData.last?.createdAt)!))")
-                    .fontWeight(.bold)
-                    .font(.title)
-                
-                Text("Your Goal is \(DaysData.last!.goal)")
-                Text("You have drank \(DaysData.last!.progress) so far today")
-                Text("You have \(DaysData.last!.goal - DaysData.last!.progress) ounces left for the day")
-            
-            }
-            .toolbar {
-                
-                Button("past days", action: {
+        VStack {
+            NavigationView {
+                List {
+                    Text("Today is \(formatter.string(from:(DaysData.last?.createdAt)!))")
+                        .fontWeight(.bold)
+                        .font(.title)
                     
-                    self.showingDataView.toggle()
+                    Text("Youre goal today is \(DaysData.last!.goal) ounces")
                     
-                }).sheet(isPresented: $showingDataView, onDismiss: {
+                }
+                .toolbar {
                     
-                    showingDataView = false
-                    
-                }) {
-                    
-                    DataSheet(DaysData: DaysData).environment(\.managedObjectContext, moc)
+                    Button("past days", action: {
+                        
+                        self.showingDataView.toggle()
+                        
+                    }).sheet(isPresented: $showingDataView, onDismiss: {
+                        
+                        showingDataView = false
+                        
+                    }) {
+                        
+                        DataSheet(DaysData: DaysData).environment(\.managedObjectContext, moc)
+                        
+                    }
                     
                 }
                 
+                
             }
-            
+//            Text("Your Goal is \(DaysData.last!.goal)")
+//            Text("You have drank \(DaysData.last!.progress) so far today")
+//            Text("You have \(DaysData.last!.goal - DaysData.last!.progress) ounces left for the day")
+            CupView()
+            Spacer()
         }
         
         

@@ -19,6 +19,7 @@
 		015D501124B4C3F10014DDE1 /* Water_Tracker_CDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D501024B4C3F10014DDE1 /* Water_Tracker_CDTests.swift */; };
 		015D501C24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D501B24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift */; };
 		015D502A24B4C4F70014DDE1 /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D502924B4C4F70014DDE1 /* DayData.swift */; };
+		01BBE5A524B7EC07006FFCAC /* CupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBE5A424B7EC07006FFCAC /* CupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		015D501B24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_Tracker_CDUITests.swift; sourceTree = "<group>"; };
 		015D501D24B4C3F10014DDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015D502924B4C4F70014DDE1 /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
+		01BBE5A424B7EC07006FFCAC /* CupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */,
 				015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */,
 				015D4FFD24B4C3F00014DDE1 /* DataSheet.swift */,
+				01BBE5A424B7EC07006FFCAC /* CupView.swift */,
 				0153EE7A24B7B4B0000D56D2 /* TodayView.swift */,
 				015C618224B52692004D50F9 /* DayCellView.swift */,
 				015D502924B4C4F70014DDE1 /* DayData.swift */,
@@ -281,6 +284,7 @@
 				015D4FF724B4C3F00014DDE1 /* AppDelegate.swift in Sources */,
 				015D502A24B4C4F70014DDE1 /* DayData.swift in Sources */,
 				015D4FF924B4C3F00014DDE1 /* SceneDelegate.swift in Sources */,
+				01BBE5A524B7EC07006FFCAC /* CupView.swift in Sources */,
 				0153EE7B24B7B4B0000D56D2 /* TodayView.swift in Sources */,
 				015D4FFE24B4C3F00014DDE1 /* DataSheet.swift in Sources */,
 				015D4FFC24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld in Sources */,
