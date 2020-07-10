@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		015D501C24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D501B24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift */; };
 		015D502A24B4C4F70014DDE1 /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D502924B4C4F70014DDE1 /* DayData.swift */; };
 		01BBE5A524B7EC07006FFCAC /* CupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBE5A424B7EC07006FFCAC /* CupView.swift */; };
+		01BBE5A824B8ACF1006FFCAC /* UIHexColor in Frameworks */ = {isa = PBXBuildFile; productRef = 01BBE5A724B8ACF1006FFCAC /* UIHexColor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BBE5A824B8ACF1006FFCAC /* UIHexColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +169,9 @@
 			dependencies = (
 			);
 			name = "Water Tracker CD";
+			packageProductDependencies = (
+				01BBE5A724B8ACF1006FFCAC /* UIHexColor */,
+			);
 			productName = "Water Tracker CD";
 			productReference = 015D4FF324B4C3F00014DDE1 /* Water Tracker CD.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +243,9 @@
 				Base,
 			);
 			mainGroup = 015D4FEA24B4C3F00014DDE1;
+			packageReferences = (
+				01BBE5A624B8ACF1006FFCAC /* XCRemoteSwiftPackageReference "SwiftUIHexColor" */,
+			);
 			productRefGroup = 015D4FF424B4C3F00014DDE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -617,6 +625,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01BBE5A624B8ACF1006FFCAC /* XCRemoteSwiftPackageReference "SwiftUIHexColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spaghoo/SwiftUIHexColor.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01BBE5A724B8ACF1006FFCAC /* UIHexColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01BBE5A624B8ACF1006FFCAC /* XCRemoteSwiftPackageReference "SwiftUIHexColor" */;
+			productName = UIHexColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		015D4FFA24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld */ = {

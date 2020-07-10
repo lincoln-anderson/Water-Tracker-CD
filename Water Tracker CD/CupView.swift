@@ -10,7 +10,7 @@ import SwiftUI
 struct CupView: View {
     var body: some View {
         cup()
-            .fill(Color.blue)
+            .fill(Color("40E0D0"))
             .overlay(
                 cup()
                 .stroke(lineWidth: 15)
