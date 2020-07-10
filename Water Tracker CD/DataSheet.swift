@@ -17,6 +17,7 @@ struct DataSheet: View {
     
     
     
+    
     var body: some View {
         
         NavigationView {
@@ -25,7 +26,7 @@ struct DataSheet: View {
                 
                 ForEach(self.DaysData) { day in
                     
-                    DayCellView(goal: Int("\(day.goal)")!, progress: Int("\(day.progress)")!, date: "\(day.createdAt ?? Date())")
+                    DayCellView(goal: Int("\(day.goal)")!, progress: Int("\(day.progress)")!, date: day.createdAt ?? Date())
                     
                 }
                 .onDelete { indexSet in

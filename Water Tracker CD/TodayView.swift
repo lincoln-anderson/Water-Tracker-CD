@@ -43,7 +43,7 @@ struct TodayView: View {
                     
                 }) {
                     
-                    DataView(DaysData: DaysData).environment(\.managedObjectContext, moc)
+                    DataSheet(DaysData: DaysData).environment(\.managedObjectContext, moc)
                     
                 }
                 

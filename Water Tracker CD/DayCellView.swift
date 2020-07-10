@@ -8,37 +8,41 @@
 import SwiftUI
 
 struct DayCellView: View {
-    static let myFormatter: DateFormatter = {
+    let myFormatter: DateFormatter = {
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM dd, yyyy"
+        formatter.dateFormat = "EEEE, MMMM, d"
         return formatter
     }()
     
     var goal: Int
     var progress: Int
-    var date: String
+    var date: Date
     
     var body: some View {
         HStack {
             VStack {
-                Text("\(goal) Ounces")
-                    .bold()
-                    .font(.title)
-                    .padding(.trailing,200)
+                HStack{
+                    Text("\(self.myFormatter.string(from: date))")
+                        .bold()
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                }
+                HStack {
+                
+                    Text("\(goal) Ounces")
+                    .foregroundColor(.secondary)
                     
                 
-                HStack {
+                
                     Text("Ounces left \(goal-progress)")
                         .multilineTextAlignment(.trailing)
-                        .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.secondary)
                     Spacer()
                     
                     
                     
-                    Text(date)
-                        .foregroundColor(.secondary)
-                        .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    
                     
                 }
             }
@@ -49,6 +53,6 @@ struct DayCellView: View {
 
 struct DayCellView_Previews: PreviewProvider {
     static var previews: some View {
-        DayCellView(goal: 120, progress: 54, date: "")
+        DayCellView(goal: 120, progress: 54, date: Date())
     }
 }
