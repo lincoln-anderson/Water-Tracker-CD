@@ -75,7 +75,7 @@ struct AddSheet: View {
     }
     
     func updateProgress(day: DayData, newProgress: Int64) {
-        day.setValue(newProgress, forKey: "progress")
+        day.setValue(newProgress + day.progress, forKey: "progress")
         
         try? self.moc.save()
         
