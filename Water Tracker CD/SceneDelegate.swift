@@ -38,18 +38,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             formatter.dateFormat = "EEEE, MMMM, d"
             
-            let day = DayData(context: managedObjectContext)
-            day.createdAt = Date()
-            day.goal = 160
-            day.progress = 20
-
-            do {
-                try managedObjectContext.save()
-            }catch{
-
-                print(error)
-
-            }
+//            let day = DayData(context: managedObjectContext)
+//            day.createdAt = Date()
+//            day.goal = 160
+//            day.progress = 0
+//
+//            do {
+//                try managedObjectContext.save()
+//            }catch{
+//
+//                print(error)
+//
+//            }
             
             let contentView = TodayView(formatter: formatter).environment(\.managedObjectContext, managedObjectContext)
             

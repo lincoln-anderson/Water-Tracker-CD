@@ -42,15 +42,17 @@ struct AddSheet: View {
             
             Button(action: {
                 
-                do {
-                    DaysData.last!.setValue(DaysData.last!.progress + Int64(Int(progressAdded)), forKey: "progress")
-                    
-                    try self.moc.save()
-                }catch{
-                    
-                    print(error)
-                    
-                }
+                updateProgress(day: DaysData.last!, newProgress: Int64(Int(progressAdded)))
+                
+//                do {
+//                    DaysData.last!.setValue(DaysData.last!.progress + Int64(Int(progressAdded)), forKey: "progress")
+//
+//                    try self.moc.save()
+//                }catch{
+//
+//                    print(error)
+//
+//                }
 
                 self.isPresented = false
                 
@@ -69,6 +71,13 @@ struct AddSheet: View {
                 
                 )}
         }
+        
+    }
+    
+    func updateProgress(day: DayData, newProgress: Int64) {
+        day.setValue(newProgress, forKey: "progress")
+        
+        try? self.moc.save()
         
     }
 }
