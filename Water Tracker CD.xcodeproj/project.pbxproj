@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0147BEDB24B93FB9007B4A0A /* PercentageCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147BEDA24B93FB9007B4A0A /* PercentageCounter.swift */; };
+		0147BEDD24B94448007B4A0A /* TodayGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147BEDC24B94448007B4A0A /* TodayGridView.swift */; };
 		0153EE7B24B7B4B0000D56D2 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0153EE7A24B7B4B0000D56D2 /* TodayView.swift */; };
 		015C618324B52692004D50F9 /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015C618224B52692004D50F9 /* DayCellView.swift */; };
 		015D4FF724B4C3F00014DDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0147BEDA24B93FB9007B4A0A /* PercentageCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCounter.swift; sourceTree = "<group>"; };
+		0147BEDC24B94448007B4A0A /* TodayGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGridView.swift; sourceTree = "<group>"; };
 		0153EE7A24B7B4B0000D56D2 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		015C618224B52692004D50F9 /* DayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		015D4FF324B4C3F00014DDE1 /* Water Tracker CD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Tracker CD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				0147BEDA24B93FB9007B4A0A /* PercentageCounter.swift */,
 				01BBE5A424B7EC07006FFCAC /* CupView.swift */,
 				01BBE5A924B8AE7B006FFCAC /* HexColorExtension.swift */,
+				0147BEDC24B94448007B4A0A /* TodayGridView.swift */,
 				0153EE7A24B7B4B0000D56D2 /* TodayView.swift */,
 				015C618224B52692004D50F9 /* DayCellView.swift */,
 				015D502924B4C4F70014DDE1 /* DayData.swift */,
@@ -301,6 +304,7 @@
 				01BBE5A524B7EC07006FFCAC /* CupView.swift in Sources */,
 				01BBE5AA24B8AE7B006FFCAC /* HexColorExtension.swift in Sources */,
 				0153EE7B24B7B4B0000D56D2 /* TodayView.swift in Sources */,
+				0147BEDD24B94448007B4A0A /* TodayGridView.swift in Sources */,
 				0147BEDB24B93FB9007B4A0A /* PercentageCounter.swift in Sources */,
 				015D4FFE24B4C3F00014DDE1 /* DataSheet.swift in Sources */,
 				015D4FFC24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld in Sources */,

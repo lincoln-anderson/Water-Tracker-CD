@@ -11,7 +11,7 @@ struct DataSheet: View {
     
     @Environment(\.managedObjectContext) var moc
     
-    @State var DaysData: FetchedResults<DayData>
+    @FetchRequest(fetchRequest: DayData.getAllDays()) var DaysData: FetchedResults<DayData>
     
     @State private var newGoal = ""
     

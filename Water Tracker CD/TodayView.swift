@@ -51,7 +51,7 @@ struct TodayView: View {
                         
                     }) {
                         
-                        DataSheet(DaysData: DaysData).environment(\.managedObjectContext, moc)
+                        DataSheet().environment(\.managedObjectContext, moc)
                         
                     }
                     
