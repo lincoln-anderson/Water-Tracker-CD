@@ -11,13 +11,11 @@ struct CupView: View {
     
     @Environment(\.managedObjectContext) var moc
     
-    @State var goal: CGFloat
-    
-    @State var progress: CGFloat
+    @FetchRequest(fetchRequest: DayData.getAllDays()) var DaysData: FetchedResults<DayData>
     
     var body: some View {
         HStack {
-            Text("\(Int(progress/goal*100))% done!")
+            Text("\(Int(CGFloat(DaysData.last!.progress)/CGFloat(DaysData.last!.goal)*100))% done!")
                 .bold()
                 .font(.title)
                 .foregroundColor(Color(hex: "40cac6"))
@@ -36,9 +34,9 @@ struct CupView: View {
     
     func getProgress() -> CGFloat {
         
-        var passedProgress = progress
+        var passedProgress = CGFloat(DaysData.last!.progress)
         
-        let passedGoal = goal
+        let passedGoal = CGFloat(DaysData.last!.goal)
         
         switch passedProgress {
         case 0 :

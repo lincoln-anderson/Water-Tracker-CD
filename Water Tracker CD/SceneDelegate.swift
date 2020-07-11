@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -36,6 +37,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             formatter.locale = Locale(identifier: "en_US")
             
             formatter.dateFormat = "EEEE, MMMM, d"
+            
+            let day = DayData(context: managedObjectContext)
+            day.createdAt = Date()
+            day.goal = 160
+            day.progress = 20
+            
+            do {
+                try managedObjectContext.save()
+            }catch{
+                
+                print(error)
+                
+            }
             
             let contentView = TodayView(formatter: formatter).environment(\.managedObjectContext, managedObjectContext)
             

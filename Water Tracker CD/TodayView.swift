@@ -13,7 +13,9 @@ struct TodayView: View {
     
     @FetchRequest(fetchRequest: DayData.getAllDays()) var DaysData: FetchedResults<DayData>
     
-    @State var showingDataView = false
+    @State var showingDataSheet = false
+    
+    @State var showingAddSheet = false
     
     var formatter: DateFormatter
     
@@ -41,17 +43,33 @@ struct TodayView: View {
                     
                     Button("past days", action: {
                         
-                        self.showingDataView.toggle()
+                        self.showingDataSheet.toggle()
                         
                     })
                     .foregroundColor(Color(hex: "40cac6"))
-                    .sheet(isPresented: $showingDataView, onDismiss: {
+                    .sheet(isPresented: $showingDataSheet, onDismiss: {
                         
-                        showingDataView = false
+                        showingDataSheet = false
                         
                     }) {
                         
                         DataSheet().environment(\.managedObjectContext, moc)
+                        
+                    }
+                    Button("add water", action: {
+                        
+                        self.showingAddSheet.toggle()
+                        
+                        
+                    })
+                    .foregroundColor(Color(hex: "40cac6"))
+                    .sheet(isPresented: $showingAddSheet, onDismiss: {
+                        
+                        showingAddSheet = false
+                        
+                    }) {
+                        
+                        AddSheet(isPresented: $showingAddSheet).environment(\.managedObjectContext, moc)
                         
                     }
                     
@@ -60,7 +78,7 @@ struct TodayView: View {
                 
             }
             
-            CupView(goal: CGFloat(DaysData.last!.goal), progress: CGFloat(DaysData.last!.progress)).environment(\.managedObjectContext, moc)
+            CupView().environment(\.managedObjectContext, moc)
             Spacer()
             Text("\(DaysData.last!.progress)/\(DaysData.last!.goal) Ounces drank")
                 .bold()
