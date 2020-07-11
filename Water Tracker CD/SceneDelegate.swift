@@ -42,13 +42,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             day.createdAt = Date()
             day.goal = 160
             day.progress = 20
-            
+
             do {
                 try managedObjectContext.save()
             }catch{
-                
+
                 print(error)
-                
+
             }
             
             let contentView = TodayView(formatter: formatter).environment(\.managedObjectContext, managedObjectContext)

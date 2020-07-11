@@ -31,31 +31,11 @@ struct TodayView: View {
                         .font(.title)
                         .foregroundColor(Color(hex: "404040"))
                     
-                    Text("Youre goal today is \(DaysData.last!.goal) ounces")
-                        .foregroundColor(Color(hex: "40cac6"))
-                    
-                    Text("\(DaysData.last!.progress)/\(DaysData.last!.goal) Ounces drank")
-                        .bold()
+                    Text("Your goal today is \(DaysData.last!.goal) ounces")
                         .foregroundColor(Color(hex: "404040"))
                     
                 }
                 .toolbar {
-                    
-                    Button("past days", action: {
-                        
-                        self.showingDataSheet.toggle()
-                        
-                    })
-                    .foregroundColor(Color(hex: "40cac6"))
-                    .sheet(isPresented: $showingDataSheet, onDismiss: {
-                        
-                        showingDataSheet = false
-                        
-                    }) {
-                        
-                        DataSheet().environment(\.managedObjectContext, moc)
-                        
-                    }
                     Button("add water", action: {
                         
                         self.showingAddSheet.toggle()
@@ -72,6 +52,23 @@ struct TodayView: View {
                         AddSheet(isPresented: $showingAddSheet).environment(\.managedObjectContext, moc)
                         
                     }
+                    
+//                    Button("past days", action: {
+//
+//                        self.showingDataSheet.toggle()
+//
+//                    })
+//                    .foregroundColor(Color(hex: "40cac6"))
+//                    .sheet(isPresented: $showingDataSheet, onDismiss: {
+//
+//                        showingDataSheet = false
+//
+//                    }) {
+//
+//                        DataSheet().environment(\.managedObjectContext, moc)
+//
+//                    }
+                    
                     
                     
                 }
