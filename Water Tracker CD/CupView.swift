@@ -16,11 +16,11 @@ struct CupView: View {
     @State var progress: CGFloat
     
     var body: some View {
-        VStack {
+        HStack {
             Text("\(Int(progress/goal*100))% done!")
                 .bold()
                 .font(.title)
-                .foregroundColor(Color(hex: "404040"))
+                .foregroundColor(Color(hex: "40cac6"))
             cup()
                 .trim(from: 0, to: getProgress())
                 .fill(Color(hex: "40cac6"))
@@ -30,7 +30,7 @@ struct CupView: View {
                         .foregroundColor(Color(hex: "404040"))
                     
                 )
-                .frame(width: 300, height: 550, alignment: .center)
+                .frame(width: 270, height: 550, alignment: .center)
         }
     }
     
@@ -48,7 +48,7 @@ struct CupView: View {
             
             passedProgress = passedProgress * 0.55
             
-            passedProgress = passedProgress + 0.40
+            passedProgress = passedProgress + 0.38
             
         }
         
@@ -71,17 +71,9 @@ struct cup: Shape {
                 CGPoint(x: width * 0.4, y: height),
                 CGPoint(x: width * 0.32, y: height * 0.4),
                 
-            
-            
             ])
-            
-            
-            
         }
     }
-    
-    
-    
 }
 
 //struct CupView_Previews: PreviewProvider {
