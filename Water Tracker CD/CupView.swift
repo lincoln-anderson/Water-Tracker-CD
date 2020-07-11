@@ -20,6 +20,7 @@ struct CupView: View {
             Text("\(Int(progress/goal*100))% done!")
                 .bold()
                 .font(.title)
+                .foregroundColor(Color(hex: "404040"))
             cup()
                 .trim(from: 0, to: getProgress())
                 .fill(Color(hex: "40cac6"))
