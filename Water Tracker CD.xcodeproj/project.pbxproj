@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,8 +23,16 @@
 		015D501C24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D501B24B4C3F10014DDE1 /* Water_Tracker_CDUITests.swift */; };
 		015D502A24B4C4F70014DDE1 /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D502924B4C4F70014DDE1 /* DayData.swift */; };
 		01BBE5A524B7EC07006FFCAC /* CupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBE5A424B7EC07006FFCAC /* CupView.swift */; };
-		01BBE5A824B8ACF1006FFCAC /* UIHexColor in Frameworks */ = {isa = PBXBuildFile; productRef = 01BBE5A724B8ACF1006FFCAC /* UIHexColor */; };
 		01BBE5AA24B8AE7B006FFCAC /* HexColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBE5A924B8AE7B006FFCAC /* HexColorExtension.swift */; };
+		01FDD824251BE9D300F4E490 /* SubSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FDD823251BE9D300F4E490 /* SubSheet.swift */; };
+		01FDD82F251BF38D00F4E490 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FDD82E251BF38D00F4E490 /* WidgetKit.framework */; };
+		01FDD831251BF38D00F4E490 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FDD830251BF38D00F4E490 /* SwiftUI.framework */; };
+		01FDD834251BF38D00F4E490 /* progress_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FDD833251BF38D00F4E490 /* progress_widget.swift */; };
+		01FDD837251BF38F00F4E490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FDD836251BF38F00F4E490 /* Assets.xcassets */; };
+		01FDD839251BF38F00F4E490 /* progress_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 01FDD835251BF38D00F4E490 /* progress_widget.intentdefinition */; };
+		01FDD83A251BF38F00F4E490 /* progress_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 01FDD835251BF38D00F4E490 /* progress_widget.intentdefinition */; };
+		01FDD83D251BF38F00F4E490 /* progress widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01FDD82C251BF38D00F4E490 /* progress widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		01FDD84C251CCA5D00F4E490 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FDD84B251CCA5D00F4E490 /* CoreDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +50,28 @@
 			remoteGlobalIDString = 015D4FF224B4C3F00014DDE1;
 			remoteInfo = "Water Tracker CD";
 		};
+		01FDD83B251BF38F00F4E490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 015D4FEB24B4C3F00014DDE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01FDD82B251BF38D00F4E490;
+			remoteInfo = "progress widgetExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01FDD841251BF38F00F4E490 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				01FDD83D251BF38F00F4E490 /* progress widgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0147BEDA24B93FB9007B4A0A /* PercentageCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCounter.swift; sourceTree = "<group>"; };
@@ -68,6 +97,16 @@
 		015D502924B4C4F70014DDE1 /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
 		01BBE5A424B7EC07006FFCAC /* CupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupView.swift; sourceTree = "<group>"; };
 		01BBE5A924B8AE7B006FFCAC /* HexColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorExtension.swift; sourceTree = "<group>"; };
+		01FDD823251BE9D300F4E490 /* SubSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSheet.swift; sourceTree = "<group>"; };
+		01FDD82C251BF38D00F4E490 /* progress widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "progress widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01FDD82E251BF38D00F4E490 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		01FDD830251BF38D00F4E490 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		01FDD833251BF38D00F4E490 /* progress_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progress_widget.swift; sourceTree = "<group>"; };
+		01FDD835251BF38D00F4E490 /* progress_widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = progress_widget.intentdefinition; sourceTree = "<group>"; };
+		01FDD836251BF38F00F4E490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01FDD838251BF38F00F4E490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01FDD846251BFA3A00F4E490 /* Water Tracker CD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Water Tracker CD.entitlements"; sourceTree = "<group>"; };
+		01FDD84B251CCA5D00F4E490 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +114,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BBE5A824B8ACF1006FFCAC /* UIHexColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +131,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01FDD829251BF38D00F4E490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01FDD831251BF38D00F4E490 /* SwiftUI.framework in Frameworks */,
+				01FDD82F251BF38D00F4E490 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -102,6 +149,8 @@
 				015D4FF524B4C3F00014DDE1 /* Water Tracker CD */,
 				015D500F24B4C3F10014DDE1 /* Water Tracker CDTests */,
 				015D501A24B4C3F10014DDE1 /* Water Tracker CDUITests */,
+				01FDD832251BF38D00F4E490 /* progress widget */,
+				01FDD82D251BF38D00F4E490 /* Frameworks */,
 				015D4FF424B4C3F00014DDE1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +161,7 @@
 				015D4FF324B4C3F00014DDE1 /* Water Tracker CD.app */,
 				015D500C24B4C3F10014DDE1 /* Water Tracker CDTests.xctest */,
 				015D501724B4C3F10014DDE1 /* Water Tracker CDUITests.xctest */,
+				01FDD82C251BF38D00F4E490 /* progress widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,15 +169,18 @@
 		015D4FF524B4C3F00014DDE1 /* Water Tracker CD */ = {
 			isa = PBXGroup;
 			children = (
+				01FDD846251BFA3A00F4E490 /* Water Tracker CD.entitlements */,
 				015D4FF624B4C3F00014DDE1 /* AppDelegate.swift */,
 				015D4FF824B4C3F00014DDE1 /* SceneDelegate.swift */,
 				015D4FFD24B4C3F00014DDE1 /* DataSheet.swift */,
 				0147BEDA24B93FB9007B4A0A /* PercentageCounter.swift */,
 				0147BEDE24B9F8EC007B4A0A /* AddSheet.swift */,
 				01BBE5A424B7EC07006FFCAC /* CupView.swift */,
+				01FDD84B251CCA5D00F4E490 /* CoreDataModel.swift */,
 				01BBE5A924B8AE7B006FFCAC /* HexColorExtension.swift */,
 				0147BEDC24B94448007B4A0A /* TodayGridView.swift */,
 				0153EE7A24B7B4B0000D56D2 /* TodayView.swift */,
+				01FDD823251BE9D300F4E490 /* SubSheet.swift */,
 				015C618224B52692004D50F9 /* DayCellView.swift */,
 				015D502924B4C4F70014DDE1 /* DayData.swift */,
 				015D4FFF24B4C3F00014DDE1 /* Assets.xcassets */,
@@ -165,6 +218,26 @@
 			path = "Water Tracker CDUITests";
 			sourceTree = "<group>";
 		};
+		01FDD82D251BF38D00F4E490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01FDD82E251BF38D00F4E490 /* WidgetKit.framework */,
+				01FDD830251BF38D00F4E490 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01FDD832251BF38D00F4E490 /* progress widget */ = {
+			isa = PBXGroup;
+			children = (
+				01FDD833251BF38D00F4E490 /* progress_widget.swift */,
+				01FDD835251BF38D00F4E490 /* progress_widget.intentdefinition */,
+				01FDD836251BF38F00F4E490 /* Assets.xcassets */,
+				01FDD838251BF38F00F4E490 /* Info.plist */,
+			);
+			path = "progress widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,14 +248,15 @@
 				015D4FEF24B4C3F00014DDE1 /* Sources */,
 				015D4FF024B4C3F00014DDE1 /* Frameworks */,
 				015D4FF124B4C3F00014DDE1 /* Resources */,
+				01FDD841251BF38F00F4E490 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				01FDD83C251BF38F00F4E490 /* PBXTargetDependency */,
 			);
 			name = "Water Tracker CD";
 			packageProductDependencies = (
-				01BBE5A724B8ACF1006FFCAC /* UIHexColor */,
 			);
 			productName = "Water Tracker CD";
 			productReference = 015D4FF324B4C3F00014DDE1 /* Water Tracker CD.app */;
@@ -224,6 +298,23 @@
 			productReference = 015D501724B4C3F10014DDE1 /* Water Tracker CDUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		01FDD82B251BF38D00F4E490 /* progress widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01FDD83E251BF38F00F4E490 /* Build configuration list for PBXNativeTarget "progress widgetExtension" */;
+			buildPhases = (
+				01FDD828251BF38D00F4E490 /* Sources */,
+				01FDD829251BF38D00F4E490 /* Frameworks */,
+				01FDD82A251BF38D00F4E490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "progress widgetExtension";
+			productName = "progress widgetExtension";
+			productReference = 01FDD82C251BF38D00F4E490 /* progress widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,6 +335,9 @@
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 015D4FF224B4C3F00014DDE1;
 					};
+					01FDD82B251BF38D00F4E490 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 				};
 			};
 			buildConfigurationList = 015D4FEE24B4C3F00014DDE1 /* Build configuration list for PBXProject "Water Tracker CD" */;
@@ -256,7 +350,6 @@
 			);
 			mainGroup = 015D4FEA24B4C3F00014DDE1;
 			packageReferences = (
-				01BBE5A624B8ACF1006FFCAC /* XCRemoteSwiftPackageReference "SwiftUIHexColor" */,
 			);
 			productRefGroup = 015D4FF424B4C3F00014DDE1 /* Products */;
 			projectDirPath = "";
@@ -265,6 +358,7 @@
 				015D4FF224B4C3F00014DDE1 /* Water Tracker CD */,
 				015D500B24B4C3F10014DDE1 /* Water Tracker CDTests */,
 				015D501624B4C3F10014DDE1 /* Water Tracker CDUITests */,
+				01FDD82B251BF38D00F4E490 /* progress widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -294,6 +388,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01FDD82A251BF38D00F4E490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01FDD837251BF38F00F4E490 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,10 +406,13 @@
 				015D4FF724B4C3F00014DDE1 /* AppDelegate.swift in Sources */,
 				015D502A24B4C4F70014DDE1 /* DayData.swift in Sources */,
 				015D4FF924B4C3F00014DDE1 /* SceneDelegate.swift in Sources */,
+				01FDD84C251CCA5D00F4E490 /* CoreDataModel.swift in Sources */,
 				01BBE5A524B7EC07006FFCAC /* CupView.swift in Sources */,
+				01FDD824251BE9D300F4E490 /* SubSheet.swift in Sources */,
 				01BBE5AA24B8AE7B006FFCAC /* HexColorExtension.swift in Sources */,
 				0153EE7B24B7B4B0000D56D2 /* TodayView.swift in Sources */,
 				0147BEDD24B94448007B4A0A /* TodayGridView.swift in Sources */,
+				01FDD83A251BF38F00F4E490 /* progress_widget.intentdefinition in Sources */,
 				0147BEDB24B93FB9007B4A0A /* PercentageCounter.swift in Sources */,
 				015D4FFE24B4C3F00014DDE1 /* DataSheet.swift in Sources */,
 				015D4FFC24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld in Sources */,
@@ -332,6 +437,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01FDD828251BF38D00F4E490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01FDD839251BF38F00F4E490 /* progress_widget.intentdefinition in Sources */,
+				01FDD834251BF38D00F4E490 /* progress_widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -344,6 +458,11 @@
 			isa = PBXTargetDependency;
 			target = 015D4FF224B4C3F00014DDE1 /* Water Tracker CD */;
 			targetProxy = 015D501824B4C3F10014DDE1 /* PBXContainerItemProxy */;
+		};
+		01FDD83C251BF38F00F4E490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01FDD82B251BF38D00F4E490 /* progress widgetExtension */;
+			targetProxy = 01FDD83B251BF38F00F4E490 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -478,8 +597,10 @@
 		015D502124B4C3F10014DDE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Water Tracker CD/Water Tracker CD.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Water Tracker CD/Preview Content\"";
 				DEVELOPMENT_TEAM = 9VS7Z57592;
@@ -499,8 +620,10 @@
 		015D502224B4C3F10014DDE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Water Tracker CD/Water Tracker CD.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Water Tracker CD/Preview Content\"";
 				DEVELOPMENT_TEAM = 9VS7Z57592;
@@ -601,6 +724,48 @@
 			};
 			name = Release;
 		};
+		01FDD83F251BF38F00F4E490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VS7Z57592;
+				INFOPLIST_FILE = "progress widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LAVA.Water-Tracker-CD.progress-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01FDD840251BF38F00F4E490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VS7Z57592;
+				INFOPLIST_FILE = "progress widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LAVA.Water-Tracker-CD.progress-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -640,26 +805,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		01FDD83E251BF38F00F4E490 /* Build configuration list for PBXNativeTarget "progress widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01FDD83F251BF38F00F4E490 /* Debug */,
+				01FDD840251BF38F00F4E490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		01BBE5A624B8ACF1006FFCAC /* XCRemoteSwiftPackageReference "SwiftUIHexColor" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/spaghoo/SwiftUIHexColor.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		01BBE5A724B8ACF1006FFCAC /* UIHexColor */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 01BBE5A624B8ACF1006FFCAC /* XCRemoteSwiftPackageReference "SwiftUIHexColor" */;
-			productName = UIHexColor;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		015D4FFA24B4C3F00014DDE1 /* Water_Tracker_CD.xcdatamodeld */ = {

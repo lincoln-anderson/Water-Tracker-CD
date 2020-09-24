@@ -12,8 +12,15 @@ import CoreData
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
+    let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @FetchRequest(fetchRequest: DayData.getAllDays()) var DaysData: FetchedResults<DayData>
+    
+    var lastGoal: Int64?
+    
+    @StateObject var model: CoreDataModel = CoreDataModel()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -25,6 +32,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
 //        let contentView = ContentView().environment(\.managedObjectContext, context)
+        
+        //self.lastGoal = DaysData.last?.goal
+        
+        
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
@@ -50,15 +61,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //                print(error)
 //
 //            }
-            
-            let contentView = TodayView(formatter: formatter).environment(\.managedObjectContext, managedObjectContext)
+//            newDay()
+//
+//            NotificationCenter.default.addObserver(self, selector: #selector(newDay), name: .NSCalendarDayChanged, object: nil)
+//
+            let contentView = TodayView(formatter: formatter).environment(\.managedObjectContext, model.persistentContainer.viewContext)
             
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }
     }
-
+    
+//    @objc func newDay() {
+//
+//
+//        let day = DayData(context: self.moc)
+//        day.createdAt = Date()
+//        day.goal = self.lastGoal!
+//        day.progress = 0
+//
+//        do {
+//            try self.moc.save()
+//        }catch{
+//
+//            print(error)
+//
+//        }
+//    }
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -88,6 +118,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(calenderDayDidChange), name: <#T##NSNotification.Name?#>, object: <#T##Any?#>)
     }
 
 

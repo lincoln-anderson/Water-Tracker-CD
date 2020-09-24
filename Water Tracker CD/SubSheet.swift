@@ -1,13 +1,13 @@
 //
-//  AddSheet.swift
+//  SubSheet.swift
 //  Water Tracker CD
 //
-//  Created by lincoln anderson on 7/11/20.
+//  Created by lincoln anderson on 9/23/20.
 //
 
 import SwiftUI
 
-struct AddSheet: View {
+struct SubSheet: View {
     
     @Environment(\.managedObjectContext) var moc
     
@@ -32,9 +32,9 @@ struct AddSheet: View {
             HStack {
                 Text("0")
                     .foregroundColor(Color(hex: "40cac6"))
-                Slider(value: $progressAdded, in: 0...Double(DaysData.last!.goal), step: 1)
+                Slider(value: $progressAdded, in: 0...Double(DaysData.last!.progress), step: 1)
                     .accentColor(Color(hex: "40cac6"))
-                Text("\(DaysData.last!.goal)")
+                Text("\(DaysData.last!.progress)")
                     .foregroundColor(Color(hex: "40cac6"))
                 
             }
@@ -47,7 +47,7 @@ struct AddSheet: View {
                 self.isPresented = false
                 
             }) {
-                Text("Add to Progress")
+                Text("Subtract Progress")
                 .fontWeight(.bold)
                 .font(.title)
                 .padding(30)
@@ -65,9 +65,15 @@ struct AddSheet: View {
     }
     
     func updateProgress(day: DayData, newProgress: Int64) {
-        day.setValue(newProgress + day.progress, forKey: "progress")
+        day.setValue(day.progress - newProgress, forKey: "progress")
         
         try? self.moc.save()
         
     }
 }
+
+//struct SubSheet_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SubSheet()
+//    }
+//}

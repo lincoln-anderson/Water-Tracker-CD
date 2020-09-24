@@ -17,6 +17,8 @@ struct TodayView: View {
     
     @State var showingAddSheet = false
     
+    @State var showingSubSheet = false
+    
     var formatter: DateFormatter
     
     
@@ -24,8 +26,9 @@ struct TodayView: View {
         
         VStack {
             
-            NavigationView {
-                List {
+            Spacer()
+            
+            VStack {
                     Text("Today is \(formatter.string(from:(DaysData.last?.createdAt)!))")
                         .fontWeight(.bold)
                         .font(.title)
@@ -33,15 +36,34 @@ struct TodayView: View {
                     
                     Text("Your goal today is \(DaysData.last!.goal) ounces")
                         .foregroundColor(Color(hex: "404040"))
+                
+            }
+            
+            Spacer()
+            
+            HStack {
+                
+                Spacer()
+                HStack {
                     
-                }
-                .toolbar {
-                    Button("add water", action: {
+                    Spacer()
+            
+                    Button(action: {
                         
                         self.showingAddSheet.toggle()
                         
                         
-                    })
+                    }) { Text("add water")
+                        .bold()
+                        .cornerRadius(50)
+                            .foregroundColor(Color(hex: "40cac6"))
+                        .padding(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 50)
+                                .stroke(Color(hex: "404040"), lineWidth: 5))
+                        
+                        
+                    }
                     .foregroundColor(Color(hex: "40cac6"))
                     .sheet(isPresented: $showingAddSheet, onDismiss: {
                         
@@ -53,27 +75,49 @@ struct TodayView: View {
                         
                     }
                     
-//                    Button("past days", action: {
-//
-//                        self.showingDataSheet.toggle()
-//
-//                    })
-//                    .foregroundColor(Color(hex: "40cac6"))
-//                    .sheet(isPresented: $showingDataSheet, onDismiss: {
-//
-//                        showingDataSheet = false
-//
-//                    }) {
-//
-//                        DataSheet().environment(\.managedObjectContext, moc)
-//
-//                    }
+                    Spacer()
+                }
+                Spacer()
+                
+                HStack {
                     
+                    Spacer()
+                
+                    Button(action: {
+                        
+                        self.showingSubSheet.toggle()
+                        
+                        
+                    }) { Text("subtract progress")
+                        .bold()
+                        .cornerRadius(50)
+                            .foregroundColor(Color(hex: "40cac6"))
+                        .padding(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 50)
+                                .stroke(Color(hex: "404040"), lineWidth: 5))
+                        
+                        
+                    }
+                    .foregroundColor(Color(hex: "40cac6"))
+                    .sheet(isPresented: $showingSubSheet, onDismiss: {
+                        
+                        showingSubSheet = false
+                        
+                    }) {
+                        
+                        SubSheet(isPresented: $showingAddSheet).environment(\.managedObjectContext, moc)
+                        
+                    }
                     
+                    Spacer()
                     
                 }
                 
+                Spacer()
+                
             }
+            
             
             CupView().environment(\.managedObjectContext, moc)
             Spacer()

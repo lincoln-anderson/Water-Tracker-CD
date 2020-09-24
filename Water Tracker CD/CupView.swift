@@ -28,7 +28,7 @@ struct CupView: View {
                         .foregroundColor(Color(hex: "404040"))
                     
                 )
-                .frame(width: 220, height: 550, alignment: .center)
+                .frame(width: 190, height: 550, alignment: .center)
         }
     }
     
