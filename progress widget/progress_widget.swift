@@ -51,8 +51,9 @@ struct SimpleEntry: TimelineEntry {
 struct progress_widgetEntryView : View {
     var entry: Provider.Entry
     
-//    @FetchRequest(fetchRequest: DayData.getAllDays()) var DaysData: FetchedResults<DayData>
-
+    @Environment(\.managedObjectContext) var moc
+    
+    //@FetchRequest(fetchRequest: DayData.getAllDays()) var DaysData: FetchedResults<DayData>
     var body: some View {
         
         HStack {
@@ -65,6 +66,7 @@ struct progress_widgetEntryView : View {
                 
             }
             
+            
             Text("50%")
             
         }
@@ -74,10 +76,11 @@ struct progress_widgetEntryView : View {
 @main
 struct progress_widget: Widget {
     let kind: String = "progress_widget"
-
+    
+    @Environment(\.managedObjectContext) var moc
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider(context: persistentContainer.viewContext)) { entry in
-            progress_widgetEntryView(entry: entry)
+            progress_widgetEntryView(entry: entry).environment(moc)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")

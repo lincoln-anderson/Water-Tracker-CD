@@ -65,7 +65,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //
 //            NotificationCenter.default.addObserver(self, selector: #selector(newDay), name: .NSCalendarDayChanged, object: nil)
 //
-            let contentView = TodayView(formatter: formatter).environment(\.managedObjectContext, model.persistentContainer.viewContext)
+            let contentView = TodayView(formatter: formatter).environment(\.managedObjectContext, managedObjectContext)
             
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
